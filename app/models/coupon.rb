@@ -1,5 +1,5 @@
 class Coupon < ActiveRecord::Base
   def to_s 
-    self.coupon_code.upcase + "-" + self.store.titlecase
+    self.store.titlecase + "-" + self.coupon_code.upcase
   end
 end
