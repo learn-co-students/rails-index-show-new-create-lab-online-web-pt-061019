@@ -55,4 +55,7 @@ Rails.application.routes.draw do
   #   end
 
   resources :coupons, only: [:index, :new, :create, :show]
+
+  get '/coupons', to: 'coupons#index', as: 'coupons_path'
+  post '/coupons', to: 'coupons#create'
 end
